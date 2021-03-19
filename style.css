@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  cursor: url(/assets/cursor.png) 16 16, progress;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(214, 214, 214);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.child {
+  border-radius: 9999px;
+  background: white;
+}
+
+.div1 {
+  grid-area: 3 / 3 / 4 / 5;
+}
+.div1:hover {
+  background: red;
+}
+.div2 {
+  grid-area: 3 / 5 / 4 / 6;
+}
+.div2:hover {
+  background: red;
+}
+.div3 {
+  grid-area: 3 / 6 / 4 / 8;
+}
+.div3:hover {
+  background: red;
+}
+.div4 {
+  grid-area: 3 / 8 / 4 / 9;
+}
+.div4:hover {
+  background: red;
+}
+.div5 {
+  grid-area: 3 / 9 / 4 / 11;
+}
+.div5:hover {
+  background: red;
+}
+.div6 {
+  grid-area: 3 / 11 / 4 / 12;
+}
+.div6:hover {
+  background: red;
+}
+.div7 {
+  grid-area: 3 / 12 / 4 / 14;
+}
+.div7:hover {
+  background: red;
+}
+.div8 {
+  grid-area: 3 / 14 / 4 / 15;
+}
+.div8:hover {
+  background: red;
+}
+.div9 {
+  grid-area: 3 / 15 / 4 / 17;
+}
+.div9:hover {
+  background: red;
+}
+.div10 {
+  grid-area: 3 / 17 / 4 / 18;
+}
+.div10:hover {
+  background: red;
+}
+.div11 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.div11:hover {
+  background: red;
+}
+.div12 {
+  grid-area: 4 / 4 / 5 / 6;
+}
+.div12:hover {
+  background: red;
+}
+.div13 {
+  grid-area: 4 / 6 / 5 / 7;
+}
+.div13:hover {
+  background: red;
+}
+.div14 {
+  grid-area: 4 / 7 / 5 / 9;
+}
+.div14:hover {
+  background: red;
+}
+.div15 {
+  grid-area: 4 / 9 / 5 / 10;
+}
+.div15:hover {
+  background: red;
+}
+.div16 {
+  grid-area: 4 / 10 / 5 / 12;
+}
+.div16:hover {
+  background: red;
+}
+.div17 {
+  grid-area: 4 / 12 / 5 / 13;
+}
+.div18 {
+  grid-area: 4 / 13 / 5 / 15;
+}
+.div19 {
+  grid-area: 4 / 15 / 5 / 16;
+}
+.div20 {
+  grid-area: 4 / 16 / 5 / 18;
+}
+.div21 {
+  grid-area: 5 / 17 / 6 / 18;
+}
+.div22 {
+  grid-area: 5 / 15 / 6 / 17;
+}
+.div23 {
+  grid-area: 5 / 14 / 6 / 15;
+}
+.div24 {
+  grid-area: 5 / 12 / 6 / 14;
+}
+.div25 {
+  grid-area: 5 / 11 / 6 / 12;
+}
+.div26 {
+  grid-area: 5 / 9 / 6 / 11;
+}
+.div27 {
+  grid-area: 5 / 8 / 6 / 9;
+}
+.div28 {
+  grid-area: 5 / 6 / 6 / 8;
+}
+.div29 {
+  grid-area: 5 / 5 / 6 / 6;
+}
+.div30 {
+  grid-area: 5 / 3 / 6 / 5;
+}
+.div31 {
+  grid-area: 6 / 3 / 7 / 4;
+}
+.div32 {
+  grid-area: 6 / 4 / 7 / 6;
+}
+.div33 {
+  grid-area: 6 / 6 / 7 / 7;
+}
+.div34 {
+  grid-area: 6 / 7 / 7 / 9;
+}
+.div35 {
+  grid-area: 6 / 9 / 7 / 10;
+}
+.div36 {
+  grid-area: 6 / 10 / 7 / 12;
+}
+.div37 {
+  grid-area: 6 / 12 / 7 / 13;
+}
+.div38 {
+  grid-area: 6 / 13 / 7 / 15;
+}
+.div39 {
+  grid-area: 6 / 15 / 7 / 16;
+}
+.div40 {
+  grid-area: 6 / 16 / 7 / 18;
+}
+.div41 {
+  grid-area: 7 / 17 / 8 / 18;
+}
+.div42 {
+  grid-area: 7 / 15 / 8 / 17;
+}
+.div43 {
+  grid-area: 7 / 14 / 8 / 15;
+}
+.div44 {
+  grid-area: 7 / 12 / 8 / 14;
+}
+.div45 {
+  grid-area: 7 / 11 / 8 / 12;
+}
+.div46 {
+  grid-area: 7 / 9 / 8 / 11;
+}
+.div47 {
+  grid-area: 7 / 8 / 8 / 9;
+}
+.div48 {
+  grid-area: 7 / 6 / 8 / 8;
+}
+.div49 {
+  grid-area: 7 / 5 / 8 / 6;
+}
+.div50 {
+  grid-area: 7 / 3 / 8 / 5;
+}
+.div51 {
+  grid-area: 8 / 3 / 9 / 4;
+}
+.div52 {
+  grid-area: 8 / 4 / 9 / 6;
+}
+.div53 {
+  grid-area: 8 / 6 / 9 / 7;
+}
+.div54 {
+  grid-area: 8 / 7 / 9 / 9;
+}
+.div55 {
+  grid-area: 8 / 9 / 9 / 10;
+}
+.div56 {
+  grid-area: 8 / 10 / 9 / 12;
+}
+.div57 {
+  grid-area: 8 / 12 / 9 / 13;
+}
+.div58 {
+  grid-area: 8 / 13 / 9 / 15;
+}
+.div59 {
+  grid-area: 8 / 15 / 9 / 16;
+}
+.div60 {
+  grid-area: 8 / 16 / 9 / 18;
+}
+.div61 {
+  grid-area: 9 / 3 / 10 / 5;
+}
+.div62 {
+  grid-area: 9 / 5 / 10 / 6;
+}
+.div63 {
+  grid-area: 9 / 6 / 10 / 8;
+}
+.div64 {
+  grid-area: 9 / 8 / 10 / 9;
+}
+.div65 {
+  grid-area: 9 / 9 / 10 / 11;
+}
+.div66 {
+  grid-area: 9 / 11 / 10 / 12;
+}
+.div67 {
+  grid-area: 9 / 12 / 10 / 14;
+}
+.div68 {
+  grid-area: 9 / 14 / 10 / 15;
+}
+.div69 {
+  grid-area: 9 / 15 / 10 / 17;
+}
+.div70 {
+  grid-area: 9 / 17 / 10 / 18;
+}
+
+svg {
+  /* display: block; */
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.figure-path {
+  transition: stroke 0.3s ease;
+}
+
+.figure-path:hover {
+  stroke: red;
+}
+
+.golden-circle {
+  transition: fill 0.3s ease;
+}
+
+.golden-circle:hover {
+  fill: gold;
+}
+
+.figure-2 {
+  transition: transform 0.5s ease;
+}
+
+.rotated {
+  transform: rotate(360deg);
+}
+
+.apple + .apple {
+  margin-left: 20px;
+}
+
+.apple-1 path {
+  fill: blue;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.video-rotating {
+  animation: spin 5s linear 0s infinite forwards;
+}
+
+.box {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.box-active {
+  background-color: blueviolet;
+}

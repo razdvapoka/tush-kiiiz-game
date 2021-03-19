@@ -1,230 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS GRID</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="box"></div>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <video id="video-1" src="assets/video.mp4" width="300px"></video>
+      <video id="video-1" src="assets/video.mp4" width="300px"></video>
+      <svg
+        class="apple-1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 394 478"
+        width="150"
+      >
+        <path
+          d="M255.45,102.74a337.38,337.38,0,0,0-26.14,27.79,62.86,62.86,0,0,0-14.53,40.22v27.88H178V171a62.61,62.61,0,0,0-14.44-40.12,337,337,0,0,0-25.87-27.48c-34.51-33-25.95-72.25-25.95-72.25,22.41,6.48,40,18.43,57.21,44.24,16.58,24.82,24.28,58.73,26.53,70.22.5,2.55,1.67,2.12,2.08,0,2.07-10.78,9.73-45.58,26.65-70.9C241.42,48.9,259,37,281.4,30.48,281.4,30.48,289.94,69.7,255.45,102.74Z"
+        />
+        <path
+          d="M208,434.05c24.65,17.47,62.87,13.47,62.87,13.47,44.92.42,89.84-78.83,92.39-160.2,2.35-75.51-37.3-125.87-78.83-136-25.75-6.3-53.29,1.73-70.5,8.74a45.64,45.64,0,0,1-34.45,0c-17.22-7-44.76-15-70.5-8.74-41.54,10.17-81.19,60.53-78.83,136,2.54,81.37,47.46,160.62,92.39,160.2,0,0,38.21,4,62.87-13.47A19.55,19.55,0,0,1,208,434.05Z"
+        />
+      </svg>
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(214, 214, 214);
-        }
-        
-        .parent {
-            display: grid;
-            grid-template-columns: repeat(19, 1fr);
-            grid-template-rows: repeat(10, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px; 
-            width: 100vw;
-            height: 100vh;
-        }
+      <img
+        class="apple apple-2"
+        width="150"
+        src="assets/images/apple.svg"
+        alt=""
+      />
+      <img
+        class="apple apple-3"
+        width="150"
+        src="assets/images/apple.svg"
+        alt=""
+      />
+      <img
+        class="apple apple-4"
+        width="150"
+        src="assets/images/apple.svg"
+        alt=""
+      />
+    </div>
 
-        .child {
-            border-radius: 9999px;
-            background: white;
-        }
+    <svg
+      width="500"
+      viewBox="0 0 176 209"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M75 170C48 140 109.722 180.309 169 208C77.3765 113.994 85.3391 91.0556 175 88C155.173 -5.00765 143.816 -22.0857 123 29C97.5957 100.058 82.7596 104.701 55 36C13.8301 31.6688 56.5 84 21 88C-14.5 92 0.499989 178.5 48 129C95.5 79.5 75 170 75 170Z"
+        stroke="red"
+      />
+      <path
+        d="M41.5 114C41.5 120.298 35.7367 125.5 28.5 125.5C21.2633 125.5 15.5 120.298 15.5 114C15.5 107.702 21.2633 102.5 28.5 102.5C35.7367 102.5 41.5 107.702 41.5 114Z"
+        stroke="blue"
+      />
+      <path
+        fill="transparent"
+        class="green-circle"
+        d="M154.5 39C154.5 45.2975 148.737 50.5 141.5 50.5C134.263 50.5 128.5 45.2975 128.5 39C128.5 32.7025 134.263 27.5 141.5 27.5C148.737 27.5 154.5 32.7025 154.5 39Z"
+        stroke="green"
+      />
+      <path
+        class="golden-circle"
+        fill="transparent"
+        d="M111.5 153C111.5 159.298 105.737 164.5 98.5 164.5C91.2633 164.5 85.5 159.298 85.5 153C85.5 146.702 91.2633 141.5 98.5 141.5C105.737 141.5 111.5 146.702 111.5 153Z"
+        stroke="gold"
+      />
+    </svg>
+    <svg
+      width="500"
+      viewBox="0 0 174 208"
+      fill="blue"
+      stroke-width="2"
+      xmlns="http://www.w3.org/2000/svg"
+      class="figure-2"
+    >
+      <path
+        class="figure-path"
+        stroke="black"
+        d="M159.959 32.5038C164.096 46.2495 168.481 64.5463 173.387 87.521C151.253 88.3002 134.083 90.308 122.191 94.346C110.188 98.4221 103.421 104.624 102.521 113.845C101.629 122.972 106.522 134.88 117.265 150.307C127.724 165.325 143.797 183.773 165.727 206.38C147.821 197.921 129.805 188.416 114.184 180.144C113.615 179.843 113.049 179.544 112.487 179.246C97.1465 171.122 84.2343 164.284 76.2564 161.001C77.1728 155.687 78.1954 148.662 78.6539 141.671C79.1231 134.518 79.0061 127.346 77.55 122.072C76.8218 119.435 75.7454 117.222 74.193 115.73C72.6211 114.219 70.5946 113.482 68.0679 113.751C65.5664 114.017 62.5935 115.267 59.07 117.67C55.5413 120.077 51.4274 123.664 46.6392 128.654C34.8036 140.988 25.1157 144.717 17.8294 143.545C10.5578 142.376 5.44486 136.284 2.84989 128.406C0.257758 120.537 0.229183 111.011 3.03293 103.224C5.83267 95.4479 11.4237 89.4695 20.056 88.4969C24.5579 87.9896 27.8695 86.7106 30.2725 84.8336C32.6797 82.9532 34.1366 80.5027 34.9781 77.7233C36.5364 72.5764 35.9979 66.225 35.4815 60.1338C35.4447 59.6992 35.4079 59.2659 35.3721 58.8344C35.101 55.5724 34.8773 52.4069 35.0098 49.518C35.1423 46.6276 35.6301 44.0578 36.7515 41.9721C37.8641 39.9027 39.6157 38.2803 42.3443 37.2972C45.0357 36.3275 48.6956 35.974 53.6494 36.4667C60.5456 53.5059 66.6594 66.0488 72.3543 74.169C78.0547 82.2972 83.4652 86.176 88.9529 85.4047C91.6825 85.021 94.3456 83.4925 96.989 80.9139C99.6322 78.3355 102.284 74.6801 104.994 69.9823C110.414 60.5889 116.116 46.9435 122.467 29.1786C127.672 16.4073 132.25 7.99455 136.465 3.94846C138.564 1.93349 140.506 1.06606 142.338 1.19348C144.176 1.32119 146.049 2.45795 147.987 4.78495C151.874 9.45249 155.78 18.6176 159.959 32.5038ZM74.0171 167.511C73.9005 168.082 73.8001 168.561 73.7202 168.936C71.5902 166.53 70.0884 164.626 69.15 163.17C68.6338 162.368 68.3004 161.721 68.1233 161.214C67.9418 160.694 67.9505 160.394 68.0084 160.238C68.051 160.123 68.1496 160.005 68.4521 159.937C68.7726 159.864 69.2546 159.867 69.9214 159.977C71.177 160.186 72.9283 160.747 75.1327 161.625C74.7061 164.05 74.3105 166.073 74.0171 167.511ZM40.5 114C40.5 120.298 34.7367 125.5 27.5 125.5C20.2633 125.5 14.5 120.298 14.5 114C14.5 107.702 20.2633 102.5 27.5 102.5C34.7367 102.5 40.5 107.702 40.5 114ZM27.5 126.5C35.175 126.5 41.5 120.957 41.5 114C41.5 107.043 35.175 101.5 27.5 101.5C19.825 101.5 13.5 107.043 13.5 114C13.5 120.957 19.825 126.5 27.5 126.5ZM153.5 39C153.5 45.2975 147.737 50.5 140.5 50.5C133.263 50.5 127.5 45.2975 127.5 39C127.5 32.7025 133.263 27.5 140.5 27.5C147.737 27.5 153.5 32.7025 153.5 39ZM140.5 51.5C148.175 51.5 154.5 45.9573 154.5 39C154.5 32.0427 148.175 26.5 140.5 26.5C132.825 26.5 126.5 32.0427 126.5 39C126.5 45.9573 132.825 51.5 140.5 51.5ZM110.5 153C110.5 159.298 104.737 164.5 97.5 164.5C90.2633 164.5 84.5 159.298 84.5 153C84.5 146.702 90.2633 141.5 97.5 141.5C104.737 141.5 110.5 146.702 110.5 153ZM97.5 165.5C105.175 165.5 111.5 159.957 111.5 153C111.5 146.043 105.175 140.5 97.5 140.5C89.825 140.5 83.5 146.043 83.5 153C83.5 159.957 89.825 165.5 97.5 165.5Z"
+        stroke="black"
+      />
+    </svg>
 
-        .div1 { grid-area: 3 / 3 / 4 / 5; }
-        .div1:hover {
-                background: red; 
-        }
-        .div2 { grid-area: 3 / 5 / 4 / 6; }
-        .div2:hover {
-                background: red; 
-        }
-        .div3 { grid-area: 3 / 6 / 4 / 8; }
-        .div3:hover {
-                background: red;
-        } 
-        .div4 { grid-area: 3 / 8 / 4 / 9; }
-        .div4:hover {
-                background: red;
-        } 
-        .div5 { grid-area: 3 / 9 / 4 / 11; }
-        .div5:hover {
-                background: red;
-        } 
-        .div6 { grid-area: 3 / 11 / 4 / 12; }
-        .div6:hover {
-                background: red;
-        } 
-        .div7 { grid-area: 3 / 12 / 4 / 14; }
-        .div7:hover {
-                background: red;
-        } 
-        .div8 { grid-area: 3 / 14 / 4 / 15; }
-        .div8:hover {
-                background: red;
-        } 
-        .div9 { grid-area: 3 / 15 / 4 / 17; }
-        .div9:hover {
-                background: red;
-        } 
-        .div10 { grid-area: 3 / 17 / 4 / 18; }
-        .div10:hover {
-                background: red;
-        } 
-        .div11 { grid-area: 4 / 3 / 5 / 4; }
-        .div11:hover {
-                background: red;
-        } 
-        .div12 { grid-area: 4 / 4 / 5 / 6; }
-        .div12:hover {
-                background: red;
-        } 
-        .div13 { grid-area: 4 / 6 / 5 / 7; }
-        .div13:hover {
-                background: red;
-        } 
-        .div14 { grid-area: 4 / 7 / 5 / 9; }
-        .div14:hover {
-                background: red;
-        } 
-        .div15 { grid-area: 4 / 9 / 5 / 10; }
-        .div15:hover {
-                background: red;
-        } 
-        .div16 { grid-area: 4 / 10 / 5 / 12; }
-        .div16:hover {
-                background: red;
-        } 
-        .div17 { grid-area: 4 / 12 / 5 / 13; }
-        .div18 { grid-area: 4 / 13 / 5 / 15; }
-        .div19 { grid-area: 4 / 15 / 5 / 16; }
-        .div20 { grid-area: 4 / 16 / 5 / 18; }
-        .div21 { grid-area: 5 / 17 / 6 / 18; }
-        .div22 { grid-area: 5 / 15 / 6 / 17; }
-        .div23 { grid-area: 5 / 14 / 6 / 15; }
-        .div24 { grid-area: 5 / 12 / 6 / 14; }
-        .div25 { grid-area: 5 / 11 / 6 / 12; }
-        .div26 { grid-area: 5 / 9 / 6 / 11; }
-        .div27 { grid-area: 5 / 8 / 6 / 9; }
-        .div28 { grid-area: 5 / 6 / 6 / 8; }
-        .div29 { grid-area: 5 / 5 / 6 / 6; }
-        .div30 { grid-area: 5 / 3 / 6 / 5; }
-        .div31 { grid-area: 6 / 3 / 7 / 4; }
-        .div32 { grid-area: 6 / 4 / 7 / 6; }
-        .div33 { grid-area: 6 / 6 / 7 / 7; }
-        .div34 { grid-area: 6 / 7 / 7 / 9; }
-        .div35 { grid-area: 6 / 9 / 7 / 10; }
-        .div36 { grid-area: 6 / 10 / 7 / 12; }
-        .div37 { grid-area: 6 / 12 / 7 / 13; }
-        .div38 { grid-area: 6 / 13 / 7 / 15; }
-        .div39 { grid-area: 6 / 15 / 7 / 16; }
-        .div40 { grid-area: 6 / 16 / 7 / 18; }
-        .div41 { grid-area: 7 / 17 / 8 / 18; }
-        .div42 { grid-area: 7 / 15 / 8 / 17; }
-        .div43 { grid-area: 7 / 14 / 8 / 15; }
-        .div44 { grid-area: 7 / 12 / 8 / 14; }
-        .div45 { grid-area: 7 / 11 / 8 / 12; }
-        .div46 { grid-area: 7 / 9 / 8 / 11; }
-        .div47 { grid-area: 7 / 8 / 8 / 9; }
-        .div48 { grid-area: 7 / 6 / 8 / 8; }
-        .div49 { grid-area: 7 / 5 / 8 / 6; }
-        .div50 { grid-area: 7 / 3 / 8 / 5; }
-        .div51 { grid-area: 8 / 3 / 9 / 4; }
-        .div52 { grid-area: 8 / 4 / 9 / 6; }
-        .div53 { grid-area: 8 / 6 / 9 / 7; }
-        .div54 { grid-area: 8 / 7 / 9 / 9; }
-        .div55 { grid-area: 8 / 9 / 9 / 10; }
-        .div56 { grid-area: 8 / 10 / 9 / 12; }
-        .div57 { grid-area: 8 / 12 / 9 / 13; }
-        .div58 { grid-area: 8 / 13 / 9 / 15; }
-        .div59 { grid-area: 8 / 15 / 9 / 16; }
-        .div60 { grid-area: 8 / 16 / 9 / 18; }
-        .div61 { grid-area: 9 / 3 / 10 / 5; }
-        .div62 { grid-area: 9 / 5 / 10 / 6; }
-        .div63 { grid-area: 9 / 6 / 10 / 8; }
-        .div64 { grid-area: 9 / 8 / 10 / 9; }
-        .div65 { grid-area: 9 / 9 / 10 / 11; }
-        .div66 { grid-area: 9 / 11 / 10 / 12; }
-        .div67 { grid-area: 9 / 12 / 10 / 14; }
-        .div68 { grid-area: 9 / 14 / 10 / 15; }
-        .div69 { grid-area: 9 / 15 / 10 / 17; }
-        .div70 { grid-area: 9 / 17 / 10 / 18; }
+    <nav class="menu">
+      <a href="bouquet.html">bouquet</a>
+      <a href="#section-1">section 1</a>
+      <a href="#section-2">section 2</a>
+      <a href="#section-3">section 3</a>
+    </nav>
 
-
-    </style>
-</head>
-<body>
-    <div class="parent">
-        <div class="div1 child"> </div>
-        <div class="div2 child"> </div>
-        <div class="div3 child"> </div>
-        <div class="div4 child"> </div>
-        <div class="div5 child"> </div>
-        <div class="div6 child"> </div>
-        <div class="div7 child"> </div>
-        <div class="div8 child"> </div>
-        <div class="div9 child"> </div>
-        <div class="div10 child"> </div>
-        <div class="div11 child"> </div>
-        <div class="div12 child"> </div>
-        <div class="div13 child"> </div>
-        <div class="div14 child"> </div>
-        <div class="div15 child"> </div>
-        <div class="div16 child"> </div>
-        <div class="div17 child"> </div>
-        <div class="div18 child"> </div>
-        <div class="div19 child"> </div>
-        <div class="div20 child"> </div>
-        <div class="div21 child"> </div>
-        <div class="div22 child"> </div>
-        <div class="div23 child"> </div>
-        <div class="div24 child"> </div>
-        <div class="div25 child"> </div>
-        <div class="div26 child"> </div>
-        <div class="div27 child"> </div>
-        <div class="div28 child"> </div>
-        <div class="div29 child"> </div>
-        <div class="div30 child"> </div>
-        <div class="div31 child"> </div>
-        <div class="div32 child"> </div>
-        <div class="div33 child"> </div>
-        <div class="div34 child"> </div>
-        <div class="div35 child"> </div>
-        <div class="div36 child"> </div>
-        <div class="div37 child"> </div>
-        <div class="div38 child"> </div>
-        <div class="div39 child"> </div>
-        <div class="div40 child"> </div>
-        <div class="div41 child"> </div>
-        <div class="div42 child"> </div>
-        <div class="div43 child"> </div>
-        <div class="div44 child"> </div>
-        <div class="div45 child"> </div>
-        <div class="div46 child"> </div>
-        <div class="div47 child"> </div>
-        <div class="div48 child"> </div>
-        <div class="div49 child"> </div>
-        <div class="div50 child"> </div>
-        <div class="div51 child"> </div>
-        <div class="div52 child"> </div>
-        <div class="div53 child"> </div>
-        <div class="div54 child"> </div>
-        <div class="div55 child"> </div>
-        <div class="div56 child"> </div>
-        <div class="div57 child"> </div>
-        <div class="div58 child"> </div>
-        <div class="div59 child"> </div>
-        <div class="div60 child"> </div>
-        <div class="div61 child"> </div>
-        <div class="div62 child"> </div>
-        <div class="div63 child"> </div>
-        <div class="div64 child"> </div>
-        <div class="div65 child"> </div>
-        <div class="div66 child"> </div>
-        <div class="div67 child"> </div>
-        <div class="div68 child"> </div>
-        <div class="div69 child"> </div>
-        <div class="div70 child"> </div>
-        </div> 
-</body>
+    <section id="section-1">
+      <div class="parent">
+        <div class="div1 child"></div>
+        <div class="div2 child"></div>
+        <div class="div3 child"></div>
+        <div class="div4 child"></div>
+        <div class="div5 child"></div>
+        <div class="div6 child"></div>
+        <div class="div7 child"></div>
+        <div class="div8 child"></div>
+        <div class="div9 child"></div>
+        <div class="div10 child"></div>
+        <div class="div11 child"></div>
+        <div class="div12 child"></div>
+        <div class="div13 child"></div>
+        <div class="div14 child"></div>
+        <div class="div15 child"></div>
+        <div class="div16 child"></div>
+        <div class="div17 child"></div>
+        <div class="div18 child"></div>
+        <div class="div19 child"></div>
+        <div class="div20 child"></div>
+        <div class="div21 child"></div>
+        <div class="div22 child"></div>
+        <div class="div23 child"></div>
+        <div class="div24 child"></div>
+        <div class="div25 child"></div>
+        <div class="div26 child"></div>
+        <div class="div27 child"></div>
+        <div class="div28 child"></div>
+        <div class="div29 child"></div>
+        <div class="div30 child"></div>
+        <div class="div31 child"></div>
+        <div class="div32 child"></div>
+        <div class="div33 child"></div>
+        <div class="div34 child"></div>
+        <div class="div35 child"></div>
+        <div class="div36 child"></div>
+        <div class="div37 child"></div>
+        <div class="div38 child"></div>
+        <div class="div39 child"></div>
+        <div class="div40 child"></div>
+        <div class="div41 child"></div>
+        <div class="div42 child"></div>
+        <div class="div43 child"></div>
+        <div class="div44 child"></div>
+        <div class="div45 child"></div>
+        <div class="div46 child"></div>
+        <div class="div47 child"></div>
+        <div class="div48 child"></div>
+        <div class="div49 child"></div>
+        <div class="div50 child"></div>
+        <div class="div51 child"></div>
+        <div class="div52 child"></div>
+        <div class="div53 child"></div>
+        <div class="div54 child"></div>
+        <div class="div55 child"></div>
+        <div class="div56 child"></div>
+        <div class="div57 child"></div>
+        <div class="div58 child"></div>
+        <div class="div59 child"></div>
+        <div class="div60 child"></div>
+        <div class="div61 child"></div>
+        <div class="div62 child"></div>
+        <div class="div63 child"></div>
+        <div class="div64 child"></div>
+        <div class="div65 child"></div>
+        <div class="div66 child"></div>
+        <div class="div67 child"></div>
+        <div class="div68 child"></div>
+        <div class="div69 child"></div>
+        <div class="div70 child"></div>
+      </div>
+    </section>
+    <section id="section-2" style="height: 100vh; background-color: aqua">
+      section 2
+    </section>
+    <section id="section-3" style="height: 100vh; background-color: coral">
+      section 3
+    </section>
+    <script src="scripts.js"></script>
+  </body>
 </html>
